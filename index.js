@@ -51,7 +51,7 @@ function muveletElvegzese(event) {
   console.log(elsoSzamjegySzovege);
   console.log(event.target.textContent); /* Ez visszaadja a műveleti jelet */
   muvelet = event.target.textContent;
-  kiiro.value = "   ";
+  kiiro.value = "";
 }
 
 /* 
@@ -72,7 +72,7 @@ function szamolas(event) {
     kiiro.value = eredmeny;
   }
   if ((muvelet = "-")) {
-    let eredmeny = Number(elsoSzamjegySzovege) + Number(masodikSzamjegySzovege);
+    let eredmeny = Number(elsoSzamjegySzovege) - Number(masodikSzamjegySzovege);
     kiiro.value = eredmeny;
   }
   if ((muvelet = "*")) {
@@ -83,7 +83,7 @@ function szamolas(event) {
     let eredmeny = Number(elsoSzamjegySzovege) / Number(masodikSzamjegySzovege);
     kiiro.value = eredmeny;
   }
-  kiiro.value = eredmeny;
+
 }
 
 const torles = document.getElementById("torles");
